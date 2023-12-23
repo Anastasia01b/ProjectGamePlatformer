@@ -24,14 +24,12 @@ namespace FormGame
         private GameManager gameManager = new GameManager();
         private GameLogic gameLogic = new GameLogic();
         private InputHandler inputHandler = new InputHandler();
-        private ScoreManager scoreManager;
         private const int BackgroundSpeed = 8;
         private const int PlayerSpeed = 7;
         private CollisionManager collisionManager;
 
         private bool jumping, movementLeft, movementRight;
         private int jumpSpeed;
-        private int score = 0;
         int force = 8;
         private List<Control> platforms = new List<Control>();
         private List<Control> coins = new List<Control>();
@@ -47,9 +45,8 @@ namespace FormGame
         {
             gameManager = new GameManager();
             inputHandler = new InputHandler();
-            collisionManager = new CollisionManager(this, GTimer, GameRestart, player, platforms, coins, monster, key, chest, scoreTxt);
+            collisionManager = new CollisionManager(this, GTimer, GameRestart, player, platforms, coins, monster, key, chest, ScoreTxt);
             gameLogic = new GameLogic();
-            scoreManager = new ScoreManager(scoreTxt);
         }
         private void EventTimer(object sender, EventArgs e)
         {
@@ -57,7 +54,6 @@ namespace FormGame
             UpdatePlayerPosition();
             gameLogic.HandleJumping(jumping, ref jumpSpeed, ref force);
             collisionManager.CheckCollisions();
-            scoreManager.UpdateScoreText(score);
         }
         private void UpdateBackground()
         {

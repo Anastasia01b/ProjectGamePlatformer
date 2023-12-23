@@ -22,9 +22,9 @@ namespace FormGame
         private bool jumping, keyPresence;
         private Timer gameTimer;
         private Action gameRestartAction;
-        private Label scoreTxt;
+        private Label ScoreTxt;
 
-        public CollisionManager(Form1 form, Timer gameTimer, Action gameRestartAction, Control player, List<Control> platforms, List<Control> coins, Control monster, Control key, Control chest, Label scoreTxt)
+        public CollisionManager(Form1 form, Timer gameTimer, Action gameRestartAction, Control player, List<Control> platforms, List<Control> coins, Control monster, Control key, Control chest, Label ScoreTxt)
         {
             this.formReference = form;
             this.player = player;
@@ -35,7 +35,7 @@ namespace FormGame
             this.chest = chest;
             this.gameTimer = gameTimer;
             this.gameRestartAction = gameRestartAction;
-            this.scoreTxt = scoreTxt;
+            this.ScoreTxt = ScoreTxt;
         }
 
         public void CheckCollisions()
@@ -119,7 +119,7 @@ namespace FormGame
             }
             else
             {
-                scoreTxt.Text = "Score: " + score + Environment.NewLine + "Collect all the coins";
+                ScoreTxt.Text = "Score: " + score + Environment.NewLine + "Collect all the coins";
             }
         }
     }

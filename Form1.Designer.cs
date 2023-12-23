@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.scoreTxt = new System.Windows.Forms.Label();
             this.GTimer = new System.Windows.Forms.Timer(this.components);
             this.chest = new System.Windows.Forms.PictureBox();
             this.pictureBox45 = new System.Windows.Forms.PictureBox();
@@ -80,6 +79,7 @@
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.ScoreTxt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).BeginInit();
@@ -130,16 +130,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.SuspendLayout();
-            // 
-            // scoreTxt
-            // 
-            this.scoreTxt.AutoSize = true;
-            this.scoreTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.scoreTxt.Location = new System.Drawing.Point(12, 0);
-            this.scoreTxt.Name = "scoreTxt";
-            this.scoreTxt.Size = new System.Drawing.Size(94, 25);
-            this.scoreTxt.TabIndex = 52;
-            this.scoreTxt.Text = "Score: 0";
             // 
             // GTimer
             // 
@@ -681,12 +671,23 @@
             this.pictureBox23.TabStop = false;
             this.pictureBox23.Tag = "platform";
             // 
+            // ScoreTxt
+            // 
+            this.ScoreTxt.AutoSize = true;
+            this.ScoreTxt.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ScoreTxt.Location = new System.Drawing.Point(12, 0);
+            this.ScoreTxt.Name = "ScoreTxt";
+            this.ScoreTxt.Size = new System.Drawing.Size(75, 24);
+            this.ScoreTxt.TabIndex = 63;
+            this.ScoreTxt.Text = "Score: 0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(596, 663);
+            this.Controls.Add(this.ScoreTxt);
             this.Controls.Add(this.pictureBox23);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox20);
@@ -696,7 +697,6 @@
             this.Controls.Add(this.pictureBox16);
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.chest);
-            this.Controls.Add(this.scoreTxt);
             this.Controls.Add(this.pictureBox45);
             this.Controls.Add(this.pictureBox46);
             this.Controls.Add(this.pictureBox47);
@@ -837,7 +837,6 @@
         private System.Windows.Forms.PictureBox pictureBox45;
         private System.Windows.Forms.PictureBox pictureBox46;
         private System.Windows.Forms.PictureBox pictureBox47;
-        private System.Windows.Forms.Label scoreTxt;
         private System.Windows.Forms.Timer GTimer;
         private System.Windows.Forms.PictureBox chest;
         private System.Windows.Forms.PictureBox pictureBox13;
@@ -848,6 +847,7 @@
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.PictureBox pictureBox21;
         private System.Windows.Forms.PictureBox pictureBox23;
+        private System.Windows.Forms.Label ScoreTxt;
     }
 }
 

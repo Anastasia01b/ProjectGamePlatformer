@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace FormGame
 {
-    internal class GameLogic
+    public class GameLogic
     {
         private const int BackgroundSpeed = 8;
         private bool jumping;
